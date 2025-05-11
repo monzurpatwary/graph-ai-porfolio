@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monzur Morshed | AI‑Powered Portfolio</title>
+  <!-- Google Font for a clean, modern feel similar to the reference site -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --clr-bg: #f5f5f5;
+      --clr-dark: #263238;
+      --clr-primary: #004d40;
+      --clr-accent: #00acc1;
+      --clr-light: #ffffff;
+    }
+
+    /* ===== RESET & GLOBAL ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--clr-dark);
+      background: var(--clr-bg);
+      scroll-behavior: smooth;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== NAVIGATION ===== */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(38,50,56,0.8); /* transparent like reference site */
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--clr-light);
+      letter-spacing: 1px;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      font-weight: 500;
+      color: var(--clr-light);
+      transition: opacity .3s ease;
+    }
+    nav a:hover, nav a:focus { opacity: 0.6; }
+
+    /* ===== HERO ===== */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-accent) 100%);
+      color: var(--clr-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .hero h2 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      margin: 0 0 1rem;
+      letter-spacing: 1px;
+    }
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--clr-light);
+      color: var(--clr-primary);
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      transition: transform .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+
+    /* ===== SECTION WRAPPER ===== */
+    section {
+      padding: clamp(4rem, 8vw, 6rem) 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    section:nth-of-type(even) { background: var(--clr-light); }
+    h3 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      color: var(--clr-primary);
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ===== TWO‑COLUMN LAYOUT ===== */
+    .grid {
+      display: grid;
+      gap: 2rem;
+    }
+    @media (min-width: 840px) { .grid { grid-template-columns: 1fr 1fr; align-items: center; } }
+
+    /* ===== SUBMISSION LIST ===== */
+    .submissions {
+      display: grid;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+    }
+    .submission {
+      background: var(--clr-light);
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid var(--clr-accent);
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: .25rem;
+    }
+    .submission span { opacity: 0.6; font-size: 0.9rem; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.9rem;
+      color: #607d8b;
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== NAV BAR ===== -->
+  <header>
+    <h1>Monzur Morshed</h1>
+    <nav>
+      <ul>
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#about-course">Course</a></li>
+        <li><a href="#weekly-submissions">Submissions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" aria-label="Introductory Hero">
+    <div>
+      <h2>Public Health × Generative AI</h2>
+      <p>Leveraging 12+ years of global health leadership and the power of AI to design scalable, impact‑driven solutions.</p>
+      <a href="#about-me" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ME ===== -->
+  <section id="about-me" aria-label="About Me">
+    <div class="grid">
+      <div>
+        <h3>About Me</h3>
+        <p>I'm a project manager and public health advocate who turns complex challenges into actionable, high‑impact initiatives. My journey spans COVID‑19 response in Bangladesh, grant wins from the Gates Foundation, and cutting‑edge AI coursework at Emory University.</p>
+        <ul>
+          <li>40 Under 40 Public Health Catalyst 2023</li>
+          <li>Host of the <em>On the Map with Global Health</em> podcast</li>
+          <li>MPH candidate (GPA 3.82) · Emory University</li>
+        </ul>
+      </div>
+      <div>
+        <!-- Placeholder image area (replace with your headshot or illustration) -->
+        <img src="https://source.unsplash.com/collection/888146/600x600" alt="Profile illustration placeholder" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT COURSE ===== -->
+  <section id="about-course" aria-label="About the Course">
+    <div class="grid">
+      <div class="order-2-mobile">
+        <!-- Placeholder illustration for course -->
+        <img src="https://source.unsplash.com/collection/190727/600x600" alt="AI tools illustration placeholder" />
+      </div>
+      <div>
+        <h3>About the Course</h3>
+        <p><strong>Generative AI for Work &amp; Research Bootcamp 2025 Q2</strong> is an 8‑week, hands‑on program that equips professionals with practical AI skills—no coding required.</p>
+        <ul>
+          <li>Create polished websites, documents, and presentations with AI</li>
+          <li>Run literature reviews, data analyses, and dashboards</li>
+          <li>Design custom chatbots for domain‑specific tasks</li>
+          <li>Automate workflows and free up hours every week</li>
+          <li>Edit images, videos, and design assets with AI tools</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SUBMISSIONS ===== -->
+  <section id="weekly-submissions" aria-label="Weekly Submissions">
+    <h3>My Weekly Submissions</h3>
+    <ul class="submissions">
+      <li class="submission">Week 1  <span>(coming soon)</span></li>
+      <li class="submission">Week 2  <span>(coming soon)</span></li>
+      <li class="submission">Week 3  <span>(coming soon)</span></li>
+      <li class="submission">Week 4  <span>(coming soon)</span></li>
+      <li class="submission">Week 5  <span>(coming soon)</span></li>
+      <li class="submission">Week 6  <span>(coming soon)</span></li>
+      <li class="submission">Week 7  <span>(coming soon)</span></li>
+      <li class="submission">Week 8  <span>(coming soon)</span></li>
+    </ul>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    &copy; <span id="year"></span> Monzur Morshed. All rights reserved.
+  </footer>
+
+  <script>
+    // Update year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple scroll‑to top offset for fixed header (optional)
+    const navLinks = document.querySelectorAll('nav a');
+    const headerHeight = document.querySelector('header').offsetHeight;
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        const target = document.querySelector(e.target.getAttribute('href'));
+        if(target) {
+          e.preventDefault();
+          const top = target.offsetTop - headerHeight + 1;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
